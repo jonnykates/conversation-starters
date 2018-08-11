@@ -1,0 +1,70 @@
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700');
+
+$light-grey: #fafafa;
+$highlight: #f47a20;
+$font-colour: #3a3a3a;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Mono', monospace;
+  color: $font-colour;
+  line-height: 1.4;
+}
+
+body {
+  background-color: $light-grey;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.so {
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.starter {
+  color: $highlight;
+  font-size: 3em;
+  margin: 1em 0;
+  max-width: 700px;
+}
+
+.regen {
+  color: lighten($font-colour, 40%);
+}
+
+.regen--mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .regen--desktop {
+    display: none;
+  }
+
+  .regen--mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .starter {
+    font-size: 2em;
+  }
+}
